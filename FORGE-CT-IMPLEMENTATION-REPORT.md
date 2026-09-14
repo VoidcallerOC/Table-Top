@@ -97,6 +97,32 @@ No replacement ecommerce platform, custom inventory engine, checkout, account sy
 
 The direction is ready for continued implementation, but production deployment integration and owner-owned event details should be confirmed before calling the work fully shipped.
 
+## Visual Implementation Polish
+
+The second implementation phase inspected the current ForgeCT repository (`VoidcallerOC/ForgeCT`, commit `5bea3e3`) and transferred its actual visual principles into Table-Top without copying ForgeCT branding. The Table-Top system now uses near-black foundations, charcoal surfaces, off-white primary text, slate secondary text, thin borders, DM Sans body typography, Instrument Serif emphasis, premium section rhythm, restrained accents, editorial grid composition, visible focus states, and fast purposeful hover transitions. The previous pastel pathway-card system was removed; all pathway and community cards now belong to one dark surface system. The TGC identity remains distinct through its name, local address, customer language, events, community categories, and production commerce destinations.
+
+The deployed Vercel URL was inspected before this phase. Its homepage returned HTTP 200, but `/pages/about-us` still returned HTTP 404, indicating the deployment was stale relative to the repository’s fixed route. The repository build passed after the visual refactor; deployment status should be rechecked after the pushed commit is picked up by Vercel.
+
+### Updated visual score
+
+| Dimension | Score |
+|---|---:|
+| Design | 9/10 |
+| UX | 8/10 |
+| Business Strategy | 8/10 |
+| Technical Quality | 8/10 |
+| Mobile | 8/10 |
+| Accessibility | 8/10 |
+| SEO | 7/10 |
+| Conversion | 8/10 |
+| Maintainability | 8/10 |
+| Portfolio Value | 9/10 |
+| **Overall Forge-CT score** | **8.1/10** |
+
+**Updated verdict: 🟡 POLISH**
+
+The visual language is now clearly ForgeCT-quality while remaining TGC-specific. Final production confidence depends on Vercel serving the new commit and a deployed visual pass at the required widths.
+
 ## Final Question
 
 **Did we make Tabletop Gaming Center meaningfully easier for a real customer to understand, shop, visit, play, join, and return — without unnecessarily rebuilding the business's existing commerce infrastructure?**
