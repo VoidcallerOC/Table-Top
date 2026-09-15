@@ -6,9 +6,9 @@ const storeUrl = 'https://www.tabletopgamingcenter.com';
 const eventsUrl = `${storeUrl}/pages/events`;
 
 const shopLinks = [
-  { label: 'Trading card games', detail: 'Magic, Pokémon, Lorcana & more', href: `${storeUrl}/collections/trading-card-games`, tone: 'orange' },
-  { label: 'Board games & RPGs', detail: 'Find your next campaign or game night', href: `${storeUrl}/collections/all`, tone: 'lilac' },
-  { label: 'Miniatures & hobby', detail: 'Warhammer, paints, tools & supplies', href: `${storeUrl}/collections/all`, tone: 'mint' },
+  { label: 'Magic & Marvel', detail: 'Singles, sealed product, and current releases', href: `${storeUrl}/collections/trading-card-games`, tone: 'orange', product: 'The Mind Stone · Marvel Super Heroes' },
+  { label: 'Pokémon & Lorcana', detail: 'Cards, collections, and the next chase card', href: `${storeUrl}/collections/trading-card-games`, tone: 'lilac', product: 'Mew · Celebrations: 25th Anniversary' },
+  { label: 'Board games & RPGs', detail: 'Warhammer, miniatures, hobby, and accessories', href: `${storeUrl}/collections/all`, tone: 'mint', product: 'Browse tabletop collections' },
 ];
 
 const communityLinks = [
@@ -36,13 +36,13 @@ function Header() {
 
 function Hero() {
   return <section className="hero">
-    <div className="hero-copy"><div className="eyebrow"><span className="pulse" /> MORE THAN A GAME STORE</div><h1>Play something.<br /><em>Meet someone.</em><br />Stay a while.</h1><p className="hero-lede">Tabletop Gaming Center is a place to shop, play, learn, compete, and find your people in Newington, Connecticut.</p><div className="hero-actions"><a className="button primary" href={eventsUrl}>See what's happening <ArrowUpRight size={17} /></a><a className="text-link" href={`${storeUrl}/collections/all`}>Shop the store <span>↗</span></a></div></div>
-    <div className="hero-visual" aria-label="A colorful abstract tabletop scene"><div className="hero-grid" /><div className="hero-sun" /><div className="hero-die die-one">20</div><div className="hero-die die-two">✦</div><div className="hero-ticket"><span>TABLETOP<br />GAMING<br /><b>CENTER</b></span><small>NEWINGTON · CT</small></div><div className="hero-caption">COME AS YOU ARE<br /><b>FIND YOUR TABLE</b></div></div>
+    <div className="hero-copy"><div className="eyebrow"><span className="pulse" /> TABLETOP GAMING CENTER · NEWINGTON, CT</div><h1>Your table<br /><em>is waiting.</em></h1><p className="hero-lede">Cards. Games. RPGs. Events. A place to shop, play, learn, compete, and find your people.</p><div className="hero-actions"><a className="button primary" href={`${storeUrl}/collections/all`}>Shop now <ArrowUpRight size={17} /></a><a className="button dark" href={eventsUrl}>See events <ArrowUpRight size={17} /></a></div><div className="hero-facts"><span><MapPin size={15} /> 741 New Britain Ave</span><span><CalendarDays size={15} /> Open late most days</span></div></div>
+    <div className="hero-photo-slot" aria-label="Reserved space for approved TGC store photography"><div className="photo-slot-label"><span>REAL TGC PHOTO SLOT</span><b>STORE / COMMUNITY / PLAY</b></div><div className="photo-slot-note">Replace with approved TGC photography.<br />Do not use generic stock imagery.</div><img src="https://cdn.shopify.com/s/files/1/0514/8888/2879/files/TGC_-_Color.png?v=1656963544" alt="Tabletop Gaming Center" /></div>
   </section>;
 }
 
 function Events() {
-  return <section className="events-section" id="events"><div className="section-kicker"><span>THIS WEEK / EVERY WEEK</span><ArrowDownRight size={22} /></div><div className="events-layout"><div><h2>What's<br /><i>happening?</i></h2><p className="section-lede">Game nights, organized play, tournaments, and community events are all part of the rhythm here. Check the live calendar for the latest schedule, times, and registration details.</p><a className="button dark" href={eventsUrl}>View all events <ArrowUpRight size={17} /></a></div><div className="event-board"><div className="board-header"><span>THE LIVE CALENDAR</span><span className="live-dot">UP TO DATE</span></div><div className="board-empty"><CalendarDays size={30} /><div><strong>Find your next reason to come by.</strong><p>See what's upcoming at TGC, from casual play to organized events.</p></div><a href={eventsUrl} aria-label="Open live events calendar"><ArrowUpRight size={21} /></a></div><div className="board-footer"><span>EVENTS · COMMUNITY · PLAY</span><a href={eventsUrl}>Open calendar ↗</a></div></div></div></section>;
+  return <section className="events-section" id="events"><div className="section-kicker"><span>WHAT'S HAPPENING · LIVE EVENT CALENDAR</span><ArrowDownRight size={22} /></div><div className="events-layout"><div><h2>What's<br /><i>happening?</i></h2><p className="section-lede">TGC's event calendar is the source of truth for current dates, times, registration, and availability. Open it for the live schedule before you head over.</p><a className="button dark" href={eventsUrl}>View all events <ArrowUpRight size={17} /></a></div><div className="event-board"><div className="board-header"><span>FIND YOUR NEXT TABLE</span><span className="live-dot">LIVE SOURCE</span></div><a className="event-row" href={eventsUrl}><span className="event-date">01</span><span><b>Event calendar</b><small>Current schedule · games · community</small></span><ArrowUpRight size={19} /></a><a className="event-row" href={eventsUrl}><span className="event-date">02</span><span><b>Organized play</b><small>Leagues · tournaments · qualifiers</small></span><ArrowUpRight size={19} /></a><a className="event-row" href={eventsUrl}><span className="event-date">03</span><span><b>Casual tables</b><small>Come by, browse the calendar, stay awhile</small></span><ArrowUpRight size={19} /></a><div className="board-footer"><span>DATES + DETAILS ON TGC'S LIVE CALENDAR</span><a href={eventsUrl}>Open ↗</a></div></div></div></section>;
 }
 
 function Community() {
@@ -50,7 +50,7 @@ function Community() {
 }
 
 function Shop() {
-  return <section className="shop-section" id="shop"><div className="shop-top"><div><div className="eyebrow">SHOP TABLETOP</div><h2>Bring home<br /><i>the next game.</i></h2></div><p>Start with what you know or follow your curiosity. The existing TGC store has the cards, games, RPGs, miniatures, and hobby supplies to keep your table moving.</p></div><div className="shop-grid">{shopLinks.map(link => <a className={`shop-item ${link.tone}`} href={link.href} key={link.label}><span className="shop-arrow"><ArrowUpRight size={19} /></span><h3>{link.label}</h3><p>{link.detail}</p><span className="shop-link">Explore collection ↗</span></a>)}</div></section>;
+  return <section className="shop-section" id="shop"><div className="shop-top"><div><div className="eyebrow">FIND YOUR GAME · SHOP TGC</div><h2>What's on<br /><i>the shelf?</i></h2></div><p>Real categories, real collections, and a direct path into the existing Shopify / BinderPOS store. Browse online, then come play in person.</p></div><div className="shop-grid">{shopLinks.map(link => <a className={`shop-item ${link.tone}`} href={link.href} key={link.label}><span className="shop-arrow"><ArrowUpRight size={19} /></span><h3>{link.label}</h3><p>{link.detail}</p><span className="shop-product">{link.product}</span><span className="shop-link">Explore collection ↗</span></a>)}</div></section>;
 }
 
 function Learn() {
@@ -62,7 +62,7 @@ function Content() {
 }
 
 function Visit() {
-  return <section className="visit-section" id="visit"><div className="visit-stamp">COME<br /><b>PLAY</b></div><div className="visit-copy"><div className="eyebrow">FIND US IN NEWINGTON</div><h2>Your next table<br /><i>is here.</i></h2><p>Tabletop Gaming Center<br />741 New Britain Ave<br />Newington, CT 06111</p><div className="visit-actions"><a className="button primary" href="https://www.google.com/maps/place/Tabletop+Gaming+Center/">Get directions <ArrowUpRight size={17} /></a><a className="phone-link" href="tel:8604362213">(860) 436-2213</a></div></div><div className="visit-map"><span className="map-pin"><MapPin size={23} /></span><span className="map-label">741 NEW BRITAIN AVE<br /><b>NEWINGTON, CT</b></span><div className="map-road road-a" /><div className="map-road road-b" /><div className="map-road road-c" /></div></section>;
+  return <section className="visit-section" id="visit"><div className="visit-stamp">COME<br /><b>PLAY</b></div><div className="visit-copy"><div className="eyebrow">FIND US IN NEWINGTON</div><h2>Your next table<br /><i>is here.</i></h2><p>Tabletop Gaming Center<br />741 New Britain Ave<br />Newington, CT 06111</p><div className="hours"><b>STORE HOURS</b><span>Mon–Thu & Sat · 10am–10pm</span><span>Friday · 10am–11pm</span><span>Sunday · 10am–8pm</span></div><div className="visit-actions"><a className="button primary" href="https://www.google.com/maps/place/Tabletop+Gaming+Center/">Get directions <ArrowUpRight size={17} /></a><a className="phone-link" href="tel:8604362213">(860) 436-2213</a></div></div><div className="visit-map"><span className="map-pin"><MapPin size={23} /></span><span className="map-label">741 NEW BRITAIN AVE<br /><b>NEWINGTON, CT</b></span><div className="map-road road-a" /><div className="map-road road-b" /><div className="map-road road-c" /></div></section>;
 }
 
 function Footer() {
