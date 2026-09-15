@@ -22,6 +22,8 @@ const featuredProducts = [
   { name: 'The Mind Stone', set: 'Marvel Super Heroes', price: '$22.20', availability: 'Only 2 units left', image: 'https://www.tabletopgamingcenter.com/cdn/shop/files/e1912879-e7f3-532c-a83e-f678e2e55036_1024x1024.png?v=1786893578', href: `${storeUrl}/products/the-mind-stone-marvel-super-heroes`, tone: 'product-orange' },
   { name: 'Mew (011/025)', set: 'Celebrations: 25th Anniversary', price: '$3.40', availability: 'Only 2 units left', image: 'https://www.tabletopgamingcenter.com/cdn/shop/files/7c3f0f79-038c-560a-9dca-fbcae0553ff5_1024x1024.jpg?v=1733553562', href: `${storeUrl}/products/mew-011-025-celebrations`, tone: 'product-yellow' },
   { name: 'Enlightened Strike', set: 'Welcome to Rathe Unlimited', price: '$11.10', availability: 'Only 2 units left', image: 'https://www.tabletopgamingcenter.com/cdn/shop/products/a5e65036-7d60-441a-80a4-44006dcbd64b_1024x1024.png?v=1643391641', href: `${storeUrl}/products/enlightened-strike-u-wtr159-unlimited-normal`, tone: 'product-lilac' },
+  { name: 'Mjolnir, Hammer of Thor', set: 'Marvel Super Heroes', price: '$9.60', availability: 'Only 2 units left', image: 'https://www.tabletopgamingcenter.com/cdn/shop/files/6119b437-2f2f-5cae-8178-cb4eedfc0e0d_1024x1024.png?v=1786893476', href: `${storeUrl}/products/mjolnir-hammer-of-thor-marvel-super-heroes`, tone: 'product-blue' },
+  { name: 'Command and Conquer', set: 'History Pack 1 · Flesh and Blood', price: '$21.60', availability: 'Only 3 units left', image: 'https://www.tabletopgamingcenter.com/cdn/shop/files/8bd1319e2f0756157806c3b469ee8486_1024x1024.png?v=1750031638', href: `${storeUrl}/products/command-and-conquer-1hp360`, tone: 'product-mint' },
 ];
 
 function Header() {
