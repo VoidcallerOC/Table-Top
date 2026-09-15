@@ -4,16 +4,16 @@ import { site } from "@/data/site";
 export default function About() {
   return (
     <main id="main-content">
-      <section className="relative flex min-h-[80svh] items-end overflow-hidden pb-16 max-md:min-h-[72svh]">
+      <section className="relative flex min-h-[62svh] items-end overflow-hidden pb-14 max-md:min-h-[58svh]">
         <img
           src="/images/play-felt.jpg"
           alt="A felt table at Tabletop Gaming Center"
           className="absolute inset-0 h-full w-full object-cover object-[center_45%]"
         />
         <div className="hero-veil absolute inset-0" />
-        <div className="relative shell pt-28">
-          <p className="eyebrow">About TGC</p>
-          <h1 className="display">
+        <div className="relative shell pt-24">
+          <p className="eyebrow text-[#ffb089]">About TGC</p>
+          <h1 className="display text-[#fffaf4]">
             A third
             <br />
             <em>space.</em>
@@ -22,7 +22,7 @@ export default function About() {
       </section>
 
       <section className="section">
-        <div className="shell grid gap-16 lg:grid-cols-2">
+        <div className="shell grid gap-12 lg:grid-cols-2">
           <p className="lede !max-w-none text-lg text-ink">
             Tabletop Gaming Center is one of New England’s largest friendly local
             game stores — independently owned, fifteen years in, originally tied
@@ -46,7 +46,7 @@ export default function About() {
       </section>
 
       <section className="section bg-cream">
-        <div className="shell grid gap-4 md:grid-cols-3">
+        <div className="shell grid gap-3 md:grid-cols-3">
           <article className="pillar">
             <span className="num">01</span>
             <h3>The room</h3>
@@ -72,7 +72,7 @@ export default function About() {
             </p>
           </article>
         </div>
-        <div className="shell mt-12 flex flex-wrap gap-3">
+        <div className="shell mt-10 flex flex-wrap gap-3">
           <Link href="/guild" className="btn btn-ghost">
             Young Adventurer’s Guild
           </Link>

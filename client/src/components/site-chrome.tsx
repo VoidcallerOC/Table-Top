@@ -13,7 +13,7 @@ function Brand() {
         height={48}
         className="size-11 shrink-0 object-contain md:size-12"
       />
-      <span className="font-serif text-[1.35rem] font-extrabold tracking-tight uppercase md:text-[1.5rem]">
+      <span className="font-serif text-[1.28rem] font-extrabold tracking-tight uppercase md:text-[1.42rem]">
         TGC
       </span>
     </Link>
@@ -24,7 +24,7 @@ export function SkipLink() {
   return (
     <a
       href="#main-content"
-      className="fixed top-3 left-3 z-50 -translate-y-[180%] bg-ember px-3 py-2 text-sm font-bold text-paper focus:translate-y-0"
+      className="fixed top-3 left-3 z-50 -translate-y-[180%] bg-ember px-3 py-2 text-sm font-bold text-[#fffaf4] focus:translate-y-0"
     >
       Skip to content
     </a>
@@ -36,11 +36,11 @@ export function SiteHeader() {
   const close = () => setOpen(false);
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-30 bg-paper/55 backdrop-blur-md">
-      <div className="shell flex min-h-[5.4rem] items-center justify-between gap-6">
+    <header className="fixed top-0 right-0 left-0 z-30 border-b border-wood/70 bg-paper/86 backdrop-blur-md">
+      <div className="shell flex min-h-[4.7rem] items-center justify-between gap-6">
         <Brand />
         <nav
-          className={`max-md:absolute max-md:top-[5.4rem] max-md:right-0 max-md:left-0 max-md:flex-col max-md:items-start max-md:gap-5 max-md:border-b max-md:border-wood max-md:bg-paper/95 max-md:px-5 max-md:py-5 ${open ? "max-md:flex" : "max-md:hidden"} flex items-center gap-7`}
+          className={`max-md:absolute max-md:top-[4.7rem] max-md:right-0 max-md:left-0 max-md:flex-col max-md:items-start max-md:gap-4 max-md:border-b max-md:border-wood max-md:bg-paper max-md:px-5 max-md:py-5 ${open ? "max-md:flex" : "max-md:hidden"} flex items-center gap-6`}
           aria-label="Primary"
         >
           {nav.map((item) =>
@@ -49,7 +49,7 @@ export function SiteHeader() {
                 key={item.label}
                 href={item.to}
                 onClick={close}
-                className="text-[0.92rem] font-semibold no-underline hover:text-ember"
+                className="text-[0.88rem] font-semibold tracking-wide no-underline hover:text-ember"
               >
                 {item.label}
               </Link>
@@ -58,7 +58,7 @@ export function SiteHeader() {
                 key={item.label}
                 href={item.to}
                 onClick={close}
-                className="text-[0.92rem] font-semibold no-underline hover:text-ember"
+                className="text-[0.88rem] font-semibold tracking-wide no-underline hover:text-ember"
               >
                 {item.label}
               </a>
@@ -88,10 +88,10 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-wood bg-cream">
-      <div className="shell grid gap-12 py-16 md:grid-cols-[1.4fr_1fr] md:py-20">
+      <div className="shell grid gap-10 py-14 md:grid-cols-[1.4fr_1fr] md:py-16">
         <div>
           <span className="font-serif text-2xl font-extrabold tracking-tight uppercase">TGC</span>
-          <p className="mt-5 max-w-sm text-sm text-muted">
+          <p className="mt-4 max-w-sm text-sm text-muted">
             {site.tagline}
             <br />
             {site.address.plaza}, {site.address.city}, {site.address.state}.
