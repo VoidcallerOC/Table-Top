@@ -7,7 +7,7 @@ function Brand() {
   return (
     <Link href="/" className="flex items-center gap-2.5 no-underline" aria-label="Tabletop Gaming Center home">
       <img
-        src="/images/tgc-logo.png"
+        src="/images/tgc-mark.svg"
         alt=""
         width={48}
         height={48}
@@ -64,11 +64,11 @@ export function SiteHeader() {
               </a>
             ),
           )}
-          <a href={site.maps} className="btn btn-small md:hidden" onClick={close}>
+          <a href={site.maps} className="btn btn-small md:hidden" onClick={close} target="_blank" rel="noopener noreferrer">
             Visit us
           </a>
         </nav>
-        <a href={site.maps} className="btn btn-small hidden md:inline-flex">
+        <a href={site.maps} className="btn btn-small hidden md:inline-flex" target="_blank" rel="noopener noreferrer">
           Visit us
         </a>
         <button
@@ -107,13 +107,13 @@ export function SiteFooter() {
           </div>
           <div className="flex flex-col gap-2">
             <strong className="eyebrow mb-1">Stay</strong>
-            <a href={site.discord} className="no-underline hover:text-ember">
+            <a href={site.discord} className="no-underline hover:text-ember" target="_blank" rel="noopener noreferrer">
               Discord <span className="glyph" aria-hidden="true">↗︎</span>
             </a>
-            <a href={site.instagram} className="no-underline hover:text-ember">
+            <a href={site.instagram} className="no-underline hover:text-ember" target="_blank" rel="noopener noreferrer">
               Instagram <span className="glyph" aria-hidden="true">↗︎</span>
             </a>
-            <a href={site.newsletter} className="no-underline hover:text-ember">
+            <a href={site.newsletter} className="no-underline hover:text-ember" target="_blank" rel="noopener noreferrer">
               Newsletter <span className="glyph" aria-hidden="true">↗︎</span>
             </a>
             <Link href="/about" className="no-underline hover:text-ember">About TGC</Link>
@@ -124,7 +124,7 @@ export function SiteFooter() {
         <span>© {new Date().getFullYear()} Tabletop Gaming Center</span>
         <span>
           Website by{" "}
-          <a href="https://www.forge-ct.com" className="text-ember no-underline hover:underline">
+          <a href="https://www.forge-ct.com" className="text-ember no-underline hover:underline" target="_blank" rel="noopener noreferrer">
             FORGE CT
           </a>
         </span>

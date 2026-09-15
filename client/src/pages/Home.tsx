@@ -17,7 +17,7 @@ const jsonLd = {
   name: "Tabletop Gaming Center",
   url: "https://www.tabletopgamingcenter.com",
   telephone: "+1-860-436-2213",
-  email: "events@tabletopgamingcenter.com",
+  email: "vaultteam@tabletopgamingcenter.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "741 New Britain Ave",
@@ -26,6 +26,16 @@ const jsonLd = {
     postalCode: "06111",
     addressCountry: "US",
   },
+  image: "https://www.tabletopgamingcenter.com/og.jpg",
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "20:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Monday", opens: "10:00", closes: "22:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Tuesday", opens: "10:00", closes: "22:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Wednesday", opens: "10:00", closes: "22:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Thursday", opens: "10:00", closes: "22:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Friday", opens: "10:00", closes: "23:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "22:00" },
+  ],
 };
 
 const marquee = [
@@ -86,10 +96,10 @@ function Hero() {
           game alone on your coffee table anymore.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
-          <a className="btn" href={site.maps}>
+          <a className="btn" href={site.maps} target="_blank" rel="noopener noreferrer">
             Plan your visit <span className="glyph" aria-hidden="true">↗︎</span>
           </a>
-          <a className="btn btn-ghost" href={site.events}>
+          <a className="btn btn-ghost" href={site.events} target="_blank" rel="noopener noreferrer">
             What’s on tonight
           </a>
         </div>
@@ -177,14 +187,14 @@ function Floor() {
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {floorGames.map((game) => (
-            <a key={game.name} href={game.href} className="game-card">
+            <a key={game.name} href={game.href} className="game-card" target="_blank" rel="noopener noreferrer">
               <span className="glow" style={{ background: game.tint }} />
               <h3>{game.name}</h3>
               <p>{game.detail}</p>
             </a>
           ))}
         </div>
-        <a className="btn mt-10" href={site.shopAll}>
+        <a className="btn mt-10" href={site.shopAll} target="_blank" rel="noopener noreferrer">
           Open the full shop <span className="glyph" aria-hidden="true">↗︎</span>
         </a>
       </div>
@@ -207,14 +217,14 @@ function Play() {
             Dates, fees, and seats live on TGC’s calendar. This is the shape of
             the week so you know the room before you walk in.
           </p>
-          <a className="btn mt-8" href={site.events}>
+          <a className="btn mt-8" href={site.events} target="_blank" rel="noopener noreferrer">
             Open the live calendar <span className="glyph" aria-hidden="true">↗︎</span>
           </a>
         </div>
         <ol className="hours-list">
           {weeklyRhythm.map((row) => (
             <li key={row.title} className="!block">
-              <a href={site.events} className="flex items-start justify-between gap-4 no-underline">
+              <a href={site.events} className="flex items-start justify-between gap-4 no-underline" target="_blank" rel="noopener noreferrer">
                 <span>
                   <b className="block font-serif text-2xl font-extrabold tracking-tight uppercase">
                     {row.title}
@@ -269,7 +279,7 @@ function Belong() {
         </h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {channels.map((channel) => (
-            <a key={channel.name} href={channel.href} className="game-card min-h-36">
+            <a key={channel.name} href={channel.href} className="game-card min-h-36" target="_blank" rel="noopener noreferrer">
               <h3>
                 {channel.name} <span className="glyph" aria-hidden="true">↗︎</span>
               </h3>
@@ -295,13 +305,13 @@ function Stories() {
               <em>talks.</em>
             </h2>
           </div>
-          <a className="btn btn-ghost" href={`${shopUrl}/blogs/news`}>
+          <a className="btn btn-ghost" href={`${shopUrl}/blogs/news`} target="_blank" rel="noopener noreferrer">
             All articles <span className="glyph" aria-hidden="true">↗︎</span>
           </a>
         </div>
         <div className="grid gap-3 md:grid-cols-3">
           {articles.map((article) => (
-            <a key={article.title} href={article.href} className="game-card min-h-64">
+            <a key={article.title} href={article.href} className="game-card min-h-64" target="_blank" rel="noopener noreferrer">
               <span className="mb-auto font-serif text-sm font-extrabold tracking-widest text-ember uppercase">
                 {article.number} · {article.kicker}
               </span>
@@ -336,7 +346,7 @@ function Visit() {
             <span className="mt-3 block">{site.address.note}</span>
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a className="btn" href={site.maps}>
+            <a className="btn" href={site.maps} target="_blank" rel="noopener noreferrer">
               Get directions <span className="glyph" aria-hidden="true">↗︎</span>
             </a>
             <a className="btn btn-ghost" href={site.phoneHref}>

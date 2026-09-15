@@ -76,7 +76,7 @@ export default function About() {
           <Link href="/guild" className="btn btn-ghost">
             Young Adventurer’s Guild
           </Link>
-          <a className="btn" href={site.maps}>
+          <a className="btn" href={site.maps} target="_blank" rel="noopener noreferrer">
             Get directions <span className="glyph" aria-hidden="true">↗︎</span>
           </a>
         </div>

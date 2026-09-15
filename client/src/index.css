@@ -72,6 +72,13 @@
     max-width: 100%;
     display: block;
   }
+
+  #visit,
+  #floor,
+  #play,
+  #main-content {
+    scroll-margin-top: 6rem;
+  }
 }
 
 @utility shell {

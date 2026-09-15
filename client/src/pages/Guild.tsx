@@ -25,11 +25,11 @@ export default function Guild() {
             sell you the book.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a className="btn" href={site.guild}>
-              Interest form <span className="glyph" aria-hidden="true">↗︎</span>
+            <a className="btn" href={`mailto:${site.guildEmail}`}>
+              Email the Guild
             </a>
-            <a className="btn btn-ghost" href={site.phoneHref}>
-              Call the desk
+            <a className="btn btn-ghost" href={site.guild} target="_blank" rel="noopener noreferrer">
+              Guild page <span className="glyph" aria-hidden="true">↗︎</span>
             </a>
           </div>
         </div>
@@ -73,11 +73,11 @@ export default function Guild() {
             </p>
           </div>
           <div className="flex flex-col gap-3">
-            <a className="btn" href={`mailto:${site.email}`}>
-              {site.email}
+            <a className="btn" href={`mailto:${site.guildEmail}`}>
+              {site.guildEmail}
             </a>
-            <a className="btn btn-ghost" href={site.events}>
-              See the live calendar
+            <a className="btn btn-ghost" href={site.phoneHref}>
+              Call the desk
             </a>
           </div>
         </div>
