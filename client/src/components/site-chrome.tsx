@@ -7,15 +7,12 @@ function Brand() {
   return (
     <Link href="/" className="flex items-center gap-2.5 no-underline" aria-label="Tabletop Gaming Center home">
       <img
-        src="/images/tgc-mark.svg"
-        alt=""
-        width={48}
-        height={48}
-        className="size-11 shrink-0 object-contain md:size-12"
+        src="/images/tgc-logo.png"
+        alt="Tabletop Gaming Center"
+        width={156}
+        height={76}
+        className="h-11 w-auto shrink-0 object-contain md:h-12"
       />
-      <span className="font-serif text-[1.28rem] font-extrabold tracking-tight uppercase md:text-[1.42rem]">
-        TGC
-      </span>
     </Link>
   );
 }
