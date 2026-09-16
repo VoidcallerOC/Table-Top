@@ -81,7 +81,7 @@ function Hero() {
         className="absolute inset-0 h-full w-full object-cover object-[center_45%]"
       />
       <div className="hero-veil absolute inset-0" />
-      <div className="relative shell w-full px-4 pt-24 md:px-2">
+      <div className="relative shell w-full px-8 pt-24 md:px-4">
         <p className="eyebrow text-[#ffb089]">
           <OpenNow className="inline-flex items-center" />
         </p>
