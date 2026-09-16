@@ -9,9 +9,9 @@ function Brand() {
       <img
         src="/images/tgc-logo.png"
         alt="Tabletop Gaming Center"
-        width={156}
-        height={76}
-        className="h-11 w-auto shrink-0 object-contain md:h-12"
+        width={312}
+        height={152}
+        className="h-14 w-auto shrink-0 object-contain md:h-16"
       />
     </Link>
   );
